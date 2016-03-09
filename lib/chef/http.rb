@@ -211,7 +211,7 @@ class Chef
         }
         SocketlessChefZeroClient.new(base_url)
       else
-        BasicClient.new(base_url, :ssl_policy => Chef::HTTP::APISSLPolicy)
+        BasicClient.cache(base_url, :ssl_policy => Chef::HTTP::APISSLPolicy)
       end
     end
 
